@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<title>Nhật ký học tập Lớp 1E5 Archimedes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--pk:#e86fa3;--bl:#4f98d6;--tx:#5b4a6b;--mu:#9a86ad}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:"Baloo 2","Comic Sans MS","Segoe UI",sans-serif;color:var(--tx);
+background:radial-gradient(circle at 10% 10%,#ffe3ee 0,transparent 40%),radial-gradient(circle at 90% 20%,#dff1ff 0,transparent 40%),#fdf6fb}
+.deco{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.deco span{position:absolute;font-size:26px;opacity:.5;animation:fl 6s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-12px) rotate(8deg)}}
+main{position:relative;max-width:900px;margin:0 auto;padding:16px 14px 40px}
+header{text-align:center}
+.logo{font-size:50px;line-height:1}
+h1{margin:4px 0 0;font-size:clamp(24px,6vw,38px);color:var(--pk);text-shadow:2px 2px 0 #fff,4px 4px 0 #ffd3e6}
+h1 em{font-style:normal;color:#6fb4ee;text-shadow:2px 2px 0 #fff,4px 4px 0 #cfe8ff}
+.sub{margin:4px 0 0;font-size:15px;color:var(--mu)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:12px 2px}
+.tab{flex:none;border:3px solid #fff;background:#ffe3ee;color:#c0507f;padding:6px 16px;border-radius:999px;font:inherit;font-weight:700;cursor:pointer;box-shadow:0 3px 0 #f6b8d1}
+.tab:nth-child(even){background:#dff1ff;color:#3f86c4;box-shadow:0 3px 0 #b5d9f5}
+.tab.on{transform:translateY(-3px) scale(1.06);outline:3px dashed #ffb3d1}
+.top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:6px 0 10px}
+.cnt{background:#fff;border:3px solid #dff1ff;border-radius:999px;padding:4px 16px;color:#3f86c4;font-weight:700}
+.go{border:0;border-radius:999px;padding:8px 20px;font:inherit;font-size:17px;font-weight:700;color:#fff;cursor:pointer;background:#ff8fbb;box-shadow:0 4px 0 var(--pk)}
+.go:active{transform:translateY(3px);box-shadow:none}
+.go:disabled{background:#d9cde6;box-shadow:0 4px 0 #bcaed0;cursor:default}
+.card{background:#fff;border:4px solid #ffd9e8;border-radius:26px;padding:14px;margin-bottom:16px;box-shadow:0 7px 0 #ffe9f2}
+.card:nth-of-type(even){border-color:#d3eaff;box-shadow:0 7px 0 #e8f4ff}
+.card h2{margin:0 0 6px;text-align:center;font-size:21px;color:var(--pk)}
+.chart{display:flex;align-items:flex-end;justify-content:center;gap:6px;overflow-x:auto;padding:22px 4px 4px;min-height:200px;background:repeating-linear-gradient(#fff 0 39px,#fdeaf3 39px 40px);border-radius:16px}
+.col{flex:1;min-width:30px;max-width:56px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+.num{font-weight:700;font-size:16px;color:var(--pk)}
+.bar{width:70%;min-height:6px;border-radius:12px 12px 4px 4px;border:3px solid #fff;background:linear-gradient(#ffb3d1,#ff8fbb);box-shadow:0 0 0 2px #ffc2da;transition:height .5s cubic-bezier(.3,1.5,.5,1)}
+.col:nth-child(even) .bar{background:linear-gradient(#b9defc,#8ec7f5);box-shadow:0 0 0 2px #c6e3fa}
+.col:nth-child(even) .num{color:var(--bl)}
+.lab{font-size:12px;margin-top:4px;color:var(--mu);font-weight:700}
+.foot{text-align:center;font-size:13px;color:#b9a7c9}
+.msg{text-align:center;font-size:14px;color:var(--mu);margin:6px 0}
+.ov{position:fixed;inset:0;background:rgba(120,90,140,.35);display:none;align-items:center;justify-content:center;padding:14px;z-index:9}
+.ov.on{display:flex}
+.box{background:#fff;border:5px solid #ffd9e8;border-radius:28px;width:100%;max-width:440px;max-height:92vh;overflow:auto;padding:18px}
+.box h3{margin:0 0 10px;text-align:center;color:var(--pk);font-size:22px}
+.ck{display:flex;gap:10px;background:#fff3f8;border:3px dashed #ffb3d1;border-radius:16px;padding:10px;font-size:15px;cursor:pointer}
+.ck input{width:22px;height:22px;flex:none;accent-color:#ff8fbb}
+.q{margin:14px 0 4px;font-weight:700}
+.sc{display:flex;align-items:center;gap:6px;font-size:18px}
+.sc input{width:80px;font:inherit;font-size:20px;text-align:center;border:3px solid #cfe8ff;border-radius:12px;padding:4px;color:#3f86c4}
+.gr{display:flex;gap:8px;flex-wrap:wrap}
+.gr button{font:inherit;font-weight:700;font-size:18px;min-width:52px;padding:6px 10px;border:3px solid #ffd9e8;background:#fff;border-radius:14px;cursor:pointer;color:#c0507f}
+.gr button.on{background:#ff8fbb;color:#fff;border-color:#ff8fbb}
+.row2{display:flex;gap:10px;margin-top:18px}
+.row2 .go{flex:1}
+.row2 .no{background:#b9defc;box-shadow:0 4px 0 #8ec7f5;flex:0 0 auto}
+.err{color:#d6457f;font-size:14px;min-height:20px;text-align:center;margin-top:8px}
+[hidden]{display:none!important}.top .no{background:#b9defc;box-shadow:0 4px 0 #8ec7f5}</style></head><body>
+<div class="deco" id="deco"></div>
+<main>
+<header>
+ <div class="logo">🦉📖🌈</div>
+ <h1>Nhật ký học tập <em>Lớp 1E5 Archimedes</em></h1>
+ <p class="sub">Chọn tháng để xem thống kê điểm của lớp ✨ Mọi bài điền đều ẩn danh</p>
+</header>
+<div class="tabs" id="tabs"></div>
+<div class="top"><span class="cnt" id="cnt"></span><button class="go" id="open">✏️ Điền điểm của con</button><button class="go no" id="del" hidden>🗑️ Xóa điểm đã nộp để điền lại</button></div>
+<div id="cards"></div>
+<div class="msg" id="msg"></div>
+<p class="foot">Làm bằng tình yêu 💗 cho các bạn nhỏ lớp 1E5</p>
+</main>
+
+<div class="ov" id="ov"><div class="box">
+ <h3>📝 Điền điểm của con</h3>
+ <label class="ck"><input type="checkbox" id="c1"><span>Ba mẹ chỉ điền điểm <b>1 lần</b> thôi nhé. Ba mẹ hãy hỏi lại người thân xem đã điền chưa nhé ạ! <b>Con chưa được điền điểm tháng này.</b></span></label>
+ <div class="q">📖 Điểm Tiếng Việt của con</div><div class="sc"><input id="vn" type="number" min="0" max="20" step="1" inputmode="numeric"> / 20</div>
+ <div class="q">➕ Điểm Toán của con</div><div class="sc"><input id="toan" type="number" min="0" max="20" step="1" inputmode="numeric"> / 20</div>
+ <div class="q">🔤 Điểm Tiếng Anh của con</div><div class="gr" id="en"></div>
+ <div class="err" id="err"></div>
+ <div class="row2"><button class="go no" id="cancel">Đóng</button><button class="go" id="send">🚀 Xác nhận nộp điểm</button></div>
+</div></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+// ====== DÁN CẤU HÌNH FIREBASE CỦA BẠN VÀO ĐÂY (xem hướng dẫn bước 3) ======
+const firebaseConfig = {
+  apiKey: "AIzaSyCWgypVLTDHRkbB4EEgZTrA7CW3HsCdZa0",
+  authDomain: "nhat-ky-1e5.firebaseapp.com",
+  projectId: "nhat-ky-1e5",
+  storageBucket: "nhat-ky-1e5.firebasestorage.app",
+  messagingSenderId: "119881071595",
+  appId: "1:119881071595:web:d09248e7db80d6981537ae"
+};
+// =========================================================================
+const MONTHS=[9,10,11,12,1,2,3,4,5],GR=["A+","A","B","C","D"];
+const $=i=>document.getElementById(i);
+let cur=(()=>{const m=new Date().getMonth()+1;return MONTHS.includes(m)?m:9})();
+let rows=[],en="",uid=null,db=null;
+const mine=()=>uid?rows.find(x=>x.id===uid+"_"+cur):null;
+function dist(field){
+ const r=rows.filter(x=>x.m===cur);
+ if(field==="en")return GR.map(g=>[g,r.filter(x=>x.en===g).length]);
+ const b=[["<10",0]];for(let i=10;i<=20;i++)b.push([String(i),0]);
+ r.forEach(x=>{const v=x[field];if(v<10)b[0][1]++;else b[v-9][1]++});
+ return b;
+}
+function card(title,data){
+ const c=document.createElement("div");c.className="card";
+ const h=document.createElement("h2");h.textContent=title;c.appendChild(h);
+ const ch=document.createElement("div");ch.className="chart";
+ const mx=Math.max(3,...data.map(d=>d[1]));
+ data.forEach(([l,n])=>{
+  const col=document.createElement("div");col.className="col";
+  col.innerHTML='<div class="num"></div><div class="bar"></div><div class="lab"></div>';
+  col.querySelector(".num").textContent=n;
+  col.querySelector(".bar").style.height=(n/mx*150+6)+"px";
+  col.querySelector(".lab").textContent=l;
+  ch.appendChild(col);
+ });
+ c.appendChild(ch);return c;
+}
+function render(){
+ $("tabs").innerHTML="";
+ MONTHS.forEach(m=>{const b=document.createElement("button");b.className="tab"+(m===cur?" on":"");b.textContent="🌸 Tháng "+m;b.onclick=()=>{cur=m;render()};$("tabs").appendChild(b)});
+ $("cnt").textContent="👨‍👩‍👧 Đã có "+rows.filter(x=>x.m===cur).length+" phụ huynh điền điểm";
+ const has=!!mine();
+ $("open").hidden=has;$("open").disabled=!uid;
+ $("del").hidden=!has;
+ const w=$("cards");w.innerHTML="";
+ w.append(card("📖 Tiếng Việt (số bạn theo điểm /20)",dist("vn")),card("➕ Toán (số bạn theo điểm /20)",dist("toan")),card("🔤 Tiếng Anh (số bạn theo mức)",dist("en")));
+}
+function openForm(){
+ $("c1").checked=false;$("vn").value="";$("toan").value="";en="";$("err").textContent="";drawEn();$("ov").classList.add("on");
+}
+function drawEn(){
+ const g=$("en");g.innerHTML="";
+ GR.forEach(x=>{const b=document.createElement("button");b.textContent=x;b.className=en===x?"on":"";b.onclick=()=>{en=x;drawEn()};g.appendChild(b)});
+}
+const okNum=v=>v!==""&&Number.isInteger(+v)&&+v>=0&&+v<=20;
+async function send(){
+ const e=$("err");
+ if(!$("c1").checked){e.textContent="Ba mẹ tick xác nhận ở trên nhé 💗";return}
+ if(!okNum($("vn").value)||!okNum($("toan").value)){e.textContent="Điểm Việt, Toán là số nguyên từ 0 đến 20 nhé";return}
+ if(!en){e.textContent="Ba mẹ chọn mức Tiếng Anh nhé";return}
+ try{
+  await db.collection("scores").doc(uid+"_"+cur).set({m:cur,vn:+$("vn").value,toan:+$("toan").value,en:en,uid:uid});
+  $("ov").classList.remove("on");
+ }catch(x){e.textContent="Chưa gửi được, ba mẹ thử lại sau nhé (có thể tháng này đã điền rồi)"}
+}
+async function redo(){
+ if(!confirm("Xóa điểm tháng "+cur+" vừa nộp để điền lại?"))return;
+ try{await db.collection("scores").doc(uid+"_"+cur).delete()}catch(x){$("msg").textContent="Chưa xóa được, thử lại sau nhé"}
+}
+$("open").onclick=openForm;$("cancel").onclick=()=>$("ov").classList.remove("on");$("send").onclick=send;$("del").onclick=redo;
+const dc=$("deco");["⭐","☁️","💗","🌈","✨","🎈","🌸","🦋"].forEach((e,i)=>{const s=document.createElement("span");s.textContent=e;s.style.left=(6+i*12)+"%";s.style.top=(8+(i*37)%78)+"%";s.style.animationDelay=(i*.7)+"s";dc.appendChild(s)});
+render();
+if(FIREBASE_CONFIG.apiKey.indexOf("DÁN")===0){
+ $("msg").textContent="⚠️ Chưa dán cấu hình Firebase vào đầu phần <script> của file.";
+}else{
+ firebase.initializeApp(FIREBASE_CONFIG);
+ db=firebase.firestore();
+ firebase.auth().onAuthStateChanged(u=>{uid=u?u.uid:null;render()});
+ firebase.auth().signInAnonymously().catch(()=>{$("msg").textContent="Chưa bật đăng nhập Ẩn danh (Anonymous) trong Firebase."});
+ db.collection("scores").onSnapshot(sn=>{rows=sn.docs.map(d=>Object.assign({id:d.id},d.data())).filter(x=>MONTHS.includes(x.m));render()},()=>{$("msg").textContent="Không đọc được dữ liệu, kiểm tra Rules trong Firebase."});
+}
+</script></body></html>
